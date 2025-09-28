@@ -6,32 +6,14 @@ import { Button } from "@/components/ui/button";
 import {
 	Form,
 	FormControl,
-	FormDescription,
 	FormField,
 	FormItem,
 	FormLabel,
 	FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import Image from "next/image";
-import {
-	Select,
-	SelectContent,
-	SelectItem,
-	SelectTrigger,
-	SelectValue,
-} from "@/components/ui/select";
-import { CalendarIcon } from "lucide-react";
-import { format } from "date-fns";
-import { Calendar } from "@/components/ui/calendar";
-import {
-	Popover,
-	PopoverContent,
-	PopoverTrigger,
-} from "@/components/ui/popover";
-import { cn } from "@/lib/utils";
+
 import React from "react";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
@@ -41,16 +23,13 @@ const formSchema = z.object({
 });
 type FormValues = z.infer<typeof formSchema>;
 export default function Page() {
-	const [open, setOpen] = React.useState(false);
 	const form = useForm<FormValues>({
 		resolver: zodResolver(formSchema), // <- KHÔNG truyền generic vào zodResolver
 		defaultValues: {
 			feedback: "",
 		},
 	});
-	function onSubmit(values: z.infer<typeof formSchema>) {
-		console.log(values);
-	}
+	function onSubmit(values: z.infer<typeof formSchema>) {}
 
 	return (
 		<div className="min-h-screen px-2 h-full flex flex-col gap-4 items-center justify-center w-full ">
