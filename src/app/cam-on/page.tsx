@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ThankYouPage() {
 	return (
 		<main className="min-h-screen flex flex-col items-center justify-center bg-pink-50 px-6">
@@ -13,12 +15,12 @@ export default function ThankYouPage() {
 					. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất để xác
 					nhận và hỗ trợ quý khách.
 				</p>
-				<a
+				<Link
 					href="/"
 					className="inline-block bg-pink-600 text-white font-medium px-6 py-3 rounded-lg shadow hover:bg-pink-700 transition"
 				>
 					Quay về trang chủ
-				</a>
+				</Link>
 			</div>
 		</main>
 	);
