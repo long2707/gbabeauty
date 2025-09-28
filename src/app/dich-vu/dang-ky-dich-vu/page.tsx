@@ -87,7 +87,7 @@ export default function Page() {
 	});
 	function onSubmit(values: z.infer<typeof formSchema>) {
 		console.log(values);
-		router.push("cam-on");
+		router.push("/cam-on");
 	}
 
 	function handleDateSelect(date: Date | undefined) {
