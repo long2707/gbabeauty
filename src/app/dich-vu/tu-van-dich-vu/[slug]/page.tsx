@@ -21,7 +21,6 @@ export default async function Page({
 			<video
 				src={ItemService?.linkVideo}
 				playsInline
-				muted
 				autoPlay
 				loop
 			></video>
