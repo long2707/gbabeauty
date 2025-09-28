@@ -32,6 +32,7 @@ import {
 import { cn } from "@/lib/utils";
 import React from "react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { useRouter } from "next/navigation";
 const emailOptional = z.preprocess(
 	(v) =>
 		typeof v === "string"
@@ -70,6 +71,9 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 export default function Page() {
 	const [open, setOpen] = React.useState(false);
+
+	const router = useRouter();
+
 	const form = useForm<FormValues>({
 		resolver: zodResolver(formSchema), // <- KHÔNG truyền generic vào zodResolver
 		defaultValues: {
@@ -83,6 +87,7 @@ export default function Page() {
 	});
 	function onSubmit(values: z.infer<typeof formSchema>) {
 		console.log(values);
+		router.push("cam-on");
 	}
 
 	function handleDateSelect(date: Date | undefined) {
