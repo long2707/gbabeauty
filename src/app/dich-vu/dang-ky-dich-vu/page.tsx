@@ -86,7 +86,21 @@ export default function Page() {
 		},
 	});
 	function onSubmit(values: z.infer<typeof formSchema>) {
-		console.log(values);
+		fetch(
+			"https://script.google.com/macros/s/AKfycbzseSID140L2k8QM_1MzQo2mC7ceNvBHDXDZOCMiwTkca0OTwFKHniqyG_OdMKC3HeGPw/exec",
+			{
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(values),
+			}
+		)
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
 		router.push("/cam-on");
 	}
 

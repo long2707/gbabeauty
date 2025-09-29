@@ -70,7 +70,6 @@ const Page = () => {
 							key={item.name}
 							className=" bg-white  flex items-center justify-center px-5 py-10 gap-3 rounded-2xl text-lg font-medium  "
 						>
-							<item.icon />
 							{item.name}
 						</button>
 					))}
