@@ -87,7 +87,7 @@ export default function Page() {
 	});
 	function onSubmit(values: z.infer<typeof formSchema>) {
 		fetch(
-			"https://script.google.com/macros/s/AKfycbzseSID140L2k8QM_1MzQo2mC7ceNvBHDXDZOCMiwTkca0OTwFKHniqyG_OdMKC3HeGPw/exec",
+			"https://script.google.com/macros/s/AKfycbx3TWme65JENWAtqip2iRBr4Izp3LY9ppKjnfi9c2L2x5Hg3bCgglmlzHqiBAMNbYxlIg/exec",
 			{
 				method: "POST",
 				headers: { "Content-Type": "application/json" },

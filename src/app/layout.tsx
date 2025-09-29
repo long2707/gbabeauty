@@ -25,11 +25,10 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased  relative bg-cover bg-center bg-no-repeat h-screen flex items-center justify-center`}
-				style={{ backgroundImage: "url('/Untitled-1.jpg')" }}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-linear-to-r from-amber-50 to-amber-200`}
 			>
 				<div className="font-sans  items-center justify-items-center min-h-screen w-full">
-					<main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-center min-h-screen h-full w-full mb-2 mx-2">
+					<main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-center min-h-screen h-full w-full mb-2">
 						{children}
 					</main>
 				</div>

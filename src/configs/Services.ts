@@ -2,7 +2,7 @@ import { FilePenLine, IdCard, Mails, MessageSquareText, PackageSearch, Users } f
 
 export const Services = [
   {
-    name: "Xông thải độc: hòa - trị liệu",
+    name: "Xông thải độc: hỏa - thủy trị liệu",
     href: "xong-thai-doc-hoa-tri-lieu",
     linkVideo: "/xong-thai-doc.mp4",
      icon: MessageSquareText,
