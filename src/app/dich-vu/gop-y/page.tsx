@@ -33,7 +33,7 @@ export default function Page() {
 
 	return (
 		<div className="min-h-screen px-2 h-full flex flex-col gap-4 items-center justify-center w-full ">
-			<Image src={"/le-tan.gif"} alt="le-tan" width={400} height={500} />
+			<video src="/letan1.webm" playsInline autoPlay loop></video>
 			<h1 className="uppercase text-4xl lg:text-3xl font-semibold text-amber-500 ">
 				Góp ý/phản hồi
 			</h1>

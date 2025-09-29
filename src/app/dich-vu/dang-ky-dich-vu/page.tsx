@@ -128,7 +128,7 @@ export default function Page() {
 	}
 	return (
 		<div className="min-h-screen px-2 h-full flex flex-col gap-4 items-center justify-center w-full overflow-y-auto mb-2.5">
-			<Image src={"/le-tan.gif"} alt="le-tan" width={400} height={500} />
+			<video src="/letan1.webm" playsInline autoPlay loop></video>
 			<h1 className="uppercase text-2xl md:text-3xl font-semibold text-amber-500 ">
 				Đăng ký dịch vụ
 			</h1>
