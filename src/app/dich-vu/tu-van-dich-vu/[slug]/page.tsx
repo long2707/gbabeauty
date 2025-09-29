@@ -29,6 +29,7 @@ export default async function Page({
 			></iframe> */}
 			<video
 				src={ItemService?.linkVideo}
+				key={slug}
 				playsInline
 				autoPlay
 				loop

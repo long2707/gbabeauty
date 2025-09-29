@@ -87,21 +87,24 @@ export default function Page() {
 	});
 	function onSubmit(values: z.infer<typeof formSchema>) {
 		fetch(
-			"https://script.google.com/macros/s/AKfycbx3TWme65JENWAtqip2iRBr4Izp3LY9ppKjnfi9c2L2x5Hg3bCgglmlzHqiBAMNbYxlIg/exec",
+			"https://script.google.com/macros/s/AKfycbz9SzX3IREr9OqGx4IWAPqCoQxwmKZGHgPHi2H6sRGE_fbztIiDq1Ycvvaclzi-ovNjOg/exec",
 			{
 				method: "POST",
-				headers: { "Content-Type": "application/json" },
+
 				body: JSON.stringify(values),
 			}
 		)
 			.then((res) => res.json())
 			.then((data) => {
+				router.push("/cam-on");
 				console.log(data);
 			})
 			.catch((error) => {
 				console.log(error);
+			})
+			.finally(() => {
+				router.push("/cam-on");
 			});
-		router.push("/cam-on");
 	}
 
 	function handleDateSelect(date: Date | undefined) {
