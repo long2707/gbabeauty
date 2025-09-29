@@ -21,17 +21,9 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
-import { CalendarIcon } from "lucide-react";
-import { format } from "date-fns";
-import { Calendar } from "@/components/ui/calendar";
-import {
-	Popover,
-	PopoverContent,
-	PopoverTrigger,
-} from "@/components/ui/popover";
-import { cn } from "@/lib/utils";
+
 import React from "react";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+
 const emailOptional = z.preprocess(
 	(v) =>
 		typeof v === "string"
@@ -108,7 +100,7 @@ export default function Page() {
 	return (
 		<div className="min-h-screen px-2 h-full flex flex-col gap-4 items-center justify-center w-full ">
 			<Image src={"/le-tan.gif"} alt="le-tan" width={400} height={500} />
-			<h1 className="uppercase text-4xl lg:text-3xl font-semibold text-amber-500 ">
+			<h1 className="uppercase text-2xl md:text-3xl font-semibold text-amber-500  text-center">
 				Đăng ký thẻ thành viên để nhận ưu đãi
 			</h1>
 			<Form {...form}>

@@ -16,7 +16,7 @@ export const Services = [
   {
     name: "Massage cổ vai gáy",
     href: "message-co-vai-gay",
-    linkVideo: "/xong-thai-doc.mp4",
+    linkVideo: "/DV MS cổ vai gáy.mp4",
      icon: Users,
   },
   {
@@ -28,7 +28,7 @@ export const Services = [
   {
     name: "Gội đầu thường",
     href: "goi-dau-thuong",
-    linkVideo: "/xong-thai-doc.mp4",
+    linkVideo: "/DV gội đầu thường.mp4",
      icon: Mails,
   },
   {

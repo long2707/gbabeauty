@@ -73,7 +73,7 @@ export default function Page() {
 	return (
 		<div className="min-h-screen px-2 h-full flex flex-col gap-4 items-center justify-center w-full ">
 			<Image src={"/le-tan.gif"} alt="le-tan" width={400} height={500} />
-			<h1 className="uppercase text-2xl lg:text-3xl font-semibold text-amber-500 ">
+			<h1 className="uppercase text-xl md:text-3xl font-semibold text-amber-500 ">
 				Đăng ký 1-1 cùng chuyên gia
 			</h1>
 			<Form {...form}>
