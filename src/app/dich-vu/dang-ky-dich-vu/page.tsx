@@ -96,7 +96,6 @@ export default function Page() {
 		)
 			.then((res) => res.json())
 			.then((data) => {
-				router.push("/cam-on");
 				console.log(data);
 			})
 			.catch((error) => {

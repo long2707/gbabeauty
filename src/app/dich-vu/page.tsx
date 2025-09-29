@@ -92,7 +92,7 @@ const Page = () => {
 								key={item.name}
 							>
 								<DialogTrigger asChild>
-									<Button className="bg-white  flex items-center justify-center px-5 py-10 gap-3 rounded-2xl text-lg font-medium ">
+									<Button className="bg-blue-50 text-black shadow-2xl hover:bg-red-200 flex items-center justify-center px-5 py-10 gap-3 rounded-2xl text-lg font-medium ">
 										{item.name}
 									</Button>
 								</DialogTrigger>
@@ -136,7 +136,7 @@ const Page = () => {
 									onHandlerItem(item);
 								}}
 								key={item.name}
-								className=" bg-white  flex items-center justify-center px-5 py-10 gap-3 rounded-2xl text-lg font-medium  "
+								className=" bg-blue-50 text-black shadow-2xl hover:bg-red-200 active:bg-red-200 flex items-center justify-center px-5 py-10 gap-3 rounded-2xl text-lg font-medium  "
 							>
 								<item.icon />
 								{item.name}
