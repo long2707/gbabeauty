@@ -28,6 +28,7 @@ export default async function Page({
 				className="rounded-lg shadow-lg w-full max-w-3xl"
 			></iframe> */}
 			<video
+				key={slug}
 				src={ItemService?.linkVideo}
 				playsInline
 				autoPlay

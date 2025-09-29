@@ -1,7 +1,6 @@
 "use client";
+import React, { useEffect } from "react";
 
-import React from "react";
-import { useRouter } from "next/navigation";
 import {
 	FilePenLine,
 	IdCard,
@@ -12,7 +11,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { Services } from "@/configs/Services";
-
+import { useRouter } from "next/navigation";
+export const dynamic = "force-dynamic";
 const MENU = [
 	{
 		icon: MessageSquareText,
@@ -51,9 +51,18 @@ const Page = () => {
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const onHandlerItem = (item: any) => {
-		console.log(item);
-		router.push("/dich-vu/tu-van-dich-vu/" + item.href);
+		window.location.href = "/dich-vu/tu-van-dich-vu/" + item.href;
 	};
+
+	useEffect(() => {
+		// Chỉ reload khi quay lại (trang được lấy từ cache bfcache)
+		const handlePageShow = (event: PageTransitionEvent) => {
+			if (event.persisted) {
+				window.location.reload();
+			}
+		};
+	}, []);
+
 	return (
 		<div className="min-h-screen px-2 h-full flex flex-col gap-4 items-center justify-center w-full mb-12">
 			<video src="/letan1.webm" playsInline autoPlay loop></video>
