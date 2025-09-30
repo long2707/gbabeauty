@@ -20,6 +20,7 @@ export default async function Page({
 				playsInline
 				autoPlay
 				loop
+				muted
 				className="h-0 w-0"
 			></video>
 			<h1 className="uppercase sm:text-2xl md:text-3xl  font-semibold text-amber-500">
@@ -39,7 +40,6 @@ export default async function Page({
 				src={ItemService?.linkVideo}
 				playsInline
 				autoPlay
-				muted
 				loop
 				className="w-full h-full object-cover"
 			></video>
