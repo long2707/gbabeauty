@@ -78,12 +78,7 @@ const Page = () => {
 	};
 	return (
 		<div className="min-h-screen px-2 h-full flex flex-col gap-4 items-center justify-center w-full pb-4">
-			<Image
-				src={"/le-tan-3.gif"}
-				alt="le-tan"
-				width={400}
-				height={500}
-			/>
+			<Image src={"/letan1.gif"} alt="le-tan" width={400} height={500} />
 			<video
 				src="/letan1.webm"
 				playsInline

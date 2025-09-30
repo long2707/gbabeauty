@@ -14,7 +14,14 @@ export default async function Page({
 
 	return (
 		<div className="min-h-screen px-2 h-full flex flex-col gap-4 items-center justify-center w-full">
-			<video src="/letan1.webm" playsInline autoPlay loop></video>
+			<Image src={"/letan1.gif"} alt="le-tan" width={400} height={500} />
+			<video
+				src="/letan1.webm"
+				playsInline
+				autoPlay
+				loop
+				className="h-0 w-0"
+			></video>
 			<h1 className="uppercase sm:text-2xl md:text-3xl  font-semibold text-amber-500">
 				{ItemService?.name}
 			</h1>
