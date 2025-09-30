@@ -33,6 +33,9 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { useRouter } from "next/navigation";
+
+import dayjs from "dayjs";
+
 const emailOptional = z.preprocess(
 	(v) =>
 		typeof v === "string"
@@ -86,24 +89,22 @@ export default function Page() {
 		},
 	});
 	function onSubmit(values: z.infer<typeof formSchema>) {
+		values.time = dayjs(values.time).format("DD/MM/YYYY HH:mm:ss");
 		fetch(
-			"https://script.google.com/macros/s/AKfycbz9SzX3IREr9OqGx4IWAPqCoQxwmKZGHgPHi2H6sRGE_fbztIiDq1Ycvvaclzi-ovNjOg/exec",
+			"https://api.sheetbest.com/sheets/76e2e990-a659-40ca-9546-00fb9a7ade72",
 			{
 				method: "POST",
-
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+				},
 				body: JSON.stringify(values),
 			}
 		)
-			.then((res) => res.json())
-			.then((data) => {
-				console.log(data);
+			.then((res) => {
+				alert("Đăng ký thành công!");
 			})
-			.catch((error) => {
-				console.log(error);
-			})
-			.finally(() => {
-				router.push("/cam-on");
-			});
+			.catch((err) => alert("Có lỗi xảy ra: " + err));
 	}
 
 	function handleDateSelect(date: Date | undefined) {
