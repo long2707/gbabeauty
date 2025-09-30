@@ -39,6 +39,7 @@ export default async function Page({
 				src={ItemService?.linkVideo}
 				playsInline
 				autoPlay
+				muted
 				loop
 				className="w-full h-full object-cover"
 			></video>
