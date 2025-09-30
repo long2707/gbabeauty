@@ -78,7 +78,11 @@ const Page = () => {
 	};
 	return (
 		<div className="min-h-screen px-2 h-full flex flex-col gap-4 items-center justify-center w-full pb-4">
-			<video src="/letan1.webm" playsInline autoPlay loop></video>
+			<div className="bg-none">
+				<video autoPlay loop muted playsInline>
+					<source src="/letan1.webm" type="video/webm" />
+				</video>
+			</div>
 			<div className="w-full flex flex-col items-center gap-5">
 				<h2 className="uppercase text-3xl lg:text-3xl font-semibold text-amber-500">
 					Danh Mục Dịch Vụ
