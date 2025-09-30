@@ -84,7 +84,7 @@ const Page = () => {
 								onHandlerItem(item);
 							}}
 							key={item.name}
-							className=" bg-blue-50 text-black shadow-2xl hover:bg-red-200  flex items-center justify-center px-5 py-10 gap-3 rounded-2xl text-lg font-medium  "
+							className=" bg-red-500 text-white shadow-2xl hover:bg-red-200  flex items-center justify-center px-5 py-10 gap-3 rounded-2xl text-lg font-medium  "
 						>
 							{item.name}
 						</button>
