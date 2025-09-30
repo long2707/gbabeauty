@@ -89,7 +89,8 @@ export default function Page() {
 		},
 	});
 	function onSubmit(values: z.infer<typeof formSchema>) {
-		values.time = dayjs(values.time).format("DD/MM/YYYY HH:mm:ss");
+		let datTime = dayjs(values.time).format("DD/MM/YYYY HH:mm:ss");
+		const payload = { ...values, time: datTime };
 		fetch(
 			"https://api.sheetbest.com/sheets/76e2e990-a659-40ca-9546-00fb9a7ade72",
 			{
@@ -98,11 +99,11 @@ export default function Page() {
 					"Content-Type": "application/json",
 					Accept: "application/json",
 				},
-				body: JSON.stringify(values),
+				body: JSON.stringify(payload),
 			}
 		)
 			.then((res) => {
-				alert("Đăng ký thành công!");
+				router.push("/cam-on");
 			})
 			.catch((err) => alert("Có lỗi xảy ra: " + err));
 	}
